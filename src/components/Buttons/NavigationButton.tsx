@@ -13,9 +13,5 @@ export default function Button(props: Props): React.JSX.Element {
         await navigate(props.path);
     }
 
-    return (
-        <button onClick={() => void handleNavigation()} className="button">
-            {props.text}
-        </button>
-    );
+    return <button onClick={() => void handleNavigation()}>{props.text}</button>;
 }
