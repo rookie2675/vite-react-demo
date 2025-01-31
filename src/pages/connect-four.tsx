@@ -1,9 +1,9 @@
 import ConnectFourBoard from "../components/Boards/ConnectFour/ConnectFourBoard";
-import "./connect-four.css";
+import styles from "./connect-four.module.css";
 
 export default function ConnectFour(): React.JSX.Element {
     return (
-        <main>
+        <main className={styles.main}>
             <h2>Connect Four</h2>
             <ConnectFourBoard />;
         </main>

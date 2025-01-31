@@ -1,3 +1,10 @@
+:root {
+    --red: #ff7f7f;
+    --yellow: #fffd94;
+    --blue: #1f8fff;
+    --darker-blue: #1f79ff;
+}
+
 body {
     margin: 0;
 }

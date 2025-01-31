@@ -1,4 +1,4 @@
-import "./ConnectFourBoard.css";
+import styles from "./ConnectFourBoard.module.css";
 
 const rows = 6;
 const columns = 7;
@@ -10,7 +10,7 @@ function createGrid(): React.JSX.Element[][] {
         const row: React.JSX.Element[] = [];
 
         for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
-            row.push(<td className="square" key={`${rowIndex.toString()}${columnIndex.toString()}`}></td>);
+            row.push(<td className={styles.square} key={`${rowIndex.toString()}${columnIndex.toString()}`}></td>);
         }
 
         array.push(row);
@@ -23,8 +23,8 @@ export default function ConnectFourBoard(): React.JSX.Element {
     const grid = createGrid();
 
     return (
-        <table>
-            <tbody>
+        <table className={styles.table}>
+            <tbody className={styles.tbody}>
                 {grid.map((row, rowIndex) => (
                     <tr key={rowIndex}>{row}</tr>
                 ))}
