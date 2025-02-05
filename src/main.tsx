@@ -15,7 +15,9 @@ createRoot(rootElement).render(
     <StrictMode>
         <BrowserRouter>
             <Header>
-                <RoutesConfiguration />
+                <main>
+                    <RoutesConfiguration />
+                </main>
             </Header>
         </BrowserRouter>
     </StrictMode>

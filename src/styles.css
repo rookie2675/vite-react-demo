@@ -12,3 +12,10 @@ body {
 button {
     padding: 0.5em;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
