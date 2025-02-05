@@ -1,0 +1,23 @@
+.options {
+    gap: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.dimensionControl {
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    gap: 0.5em;
+    display: flex;
+    flex-direction: row;
+}
+
+td {
+    width: 10em;
+    height: 10em;
+    border: 1px solid black;
+}
