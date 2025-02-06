@@ -10,14 +10,32 @@
     flex-direction: column;
 }
 
-label {
+.label {
     gap: 0.5em;
     display: flex;
     flex-direction: row;
 }
 
-td {
+.cell {
     width: 10em;
     height: 10em;
+    text-align: center;
     border: 1px solid black;
+}
+
+/* Remove outer borders when toggle is active */
+.table.removeBorders tr:first-child td {
+    border-top-color: transparent;
+}
+
+.table.removeBorders tr:last-child td {
+    border-bottom-color: transparent;
+}
+
+.table.removeBorders td:first-child {
+    border-left-color: transparent;
+}
+
+.table.removeBorders td:last-child {
+    border-right-color: transparent;
 }

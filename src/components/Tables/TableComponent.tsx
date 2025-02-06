@@ -27,22 +27,28 @@ function generateTable(rows: number, columns: number): React.JSX.Element[] {
 export default function Table(): React.JSX.Element {
     const [rows, setRows] = useState<number>(3);
     const [columns, setColumns] = useState<number>(3);
+    const [bordersVisible, setBordersVisible] = useState<boolean>(false);
 
     const table = generateTable(rows, columns);
+
+    function handleToggleBorders(): void {
+        setBordersVisible(!bordersVisible);
+    }
 
     return (
         <>
             <div className={styles.options}>
-                <label>
+                <label className={styles.label}>
                     Rows:
                     <ControlledNumberInputComponent min={1} max={100} value={rows} setValue={setRows} />
                 </label>
-                <label>
+                <label className={styles.label}>
                     Columns:
                     <ControlledNumberInputComponent min={1} max={100} value={columns} setValue={setColumns} />
                 </label>
             </div>
-            <table className={styles.table}>
+            <button onClick={handleToggleBorders}>Toggle Borders</button>
+            <table className={`${styles.table} ${!bordersVisible ? styles.removeBorders : ""}`}>
                 <tbody>{table}</tbody>
             </table>
         </>
