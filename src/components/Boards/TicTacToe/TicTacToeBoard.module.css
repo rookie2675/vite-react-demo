@@ -1,0 +1,19 @@
+.board {
+    border-spacing: 0;
+}
+
+.board tr:first-child td {
+    border-top-color: transparent;
+}
+
+.board tr:last-child td {
+    border-bottom-color: transparent;
+}
+
+.board td:first-child {
+    border-left-color: transparent;
+}
+
+.board td:last-child {
+    border-right-color: transparent;
+}
