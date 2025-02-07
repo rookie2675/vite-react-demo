@@ -23,6 +23,10 @@
     border: 1px solid black;
 }
 
+.table {
+    border-collapse: collapse;
+}
+
 /* Remove outer borders when toggle is active */
 .table.removeBorders tr:first-child td {
     border-top-color: transparent;
