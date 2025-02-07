@@ -1,4 +1,4 @@
-import TicTacToeBoard from "../components/Boards/TicTacToe/TicTacToeBoard";
+import TicTacToeBoard from "@/components/Boards/TicTacToe/TicTacToeBoard";
 
 export default function TicTacToe(): React.JSX.Element {
     return (

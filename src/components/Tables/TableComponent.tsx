@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ControlledNumberInputComponent from "../Inputs/ControlledNumberInputComponent";
+import ControlledNumberInputComponent from "@/components/Inputs/ControlledNumberInputComponent";
 import styles from "./TableComponent.module.css";
 
 function generateTable(rows: number, columns: number): React.JSX.Element[] {

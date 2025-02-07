@@ -1,4 +1,4 @@
-import logo from "../../assets/vite.svg";
+import logo from "@/assets/vite.svg";
 
 interface Props {
     readonly width: string;

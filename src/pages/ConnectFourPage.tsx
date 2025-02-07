@@ -1,4 +1,4 @@
-import ConnectFourBoard from "../components/Boards/ConnectFour/ConnectFourBoard";
+import ConnectFourBoard from "@/components/Boards/ConnectFour/ConnectFourBoard";
 
 export default function ConnectFour(): React.JSX.Element {
     return (

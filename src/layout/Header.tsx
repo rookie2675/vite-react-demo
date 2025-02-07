@@ -1,5 +1,5 @@
-import ReactLogo from "../components/Logos/ReactLogo";
-import ViteLogo from "../components/Logos/ViteLogo";
+import ReactLogo from "@/components/Logos/ReactLogo";
+import ViteLogo from "@/components/Logos/ViteLogo";
 import "./Header.css";
 
 interface Props {

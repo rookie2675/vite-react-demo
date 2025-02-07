@@ -1,4 +1,4 @@
-import NavigationButton from "../components/Buttons/NavigationButton";
+import NavigationButton from "@/components/Buttons/NavigationButton";
 
 export default function Home(): React.JSX.Element {
     return (
