@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./TicTacToeBoardCell.module.css";
-import TicTacToeCrossToken from "./TicTacToeCrossToken";
-import TicTacToeCircleToken from "./TicTacToeCircleToken";
+import TicTacToeCrossToken from "../token/TicTacToeCrossToken";
+import TicTacToeCircleToken from "../token/TicTacToeCircleToken";
 
 export default function TicTacToeBoardSquare(): React.JSX.Element {
     type Token = "X" | "O" | null;
