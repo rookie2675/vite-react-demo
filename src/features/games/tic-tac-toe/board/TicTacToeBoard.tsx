@@ -1,5 +1,5 @@
 import styles from "./TicTacToeBoard.module.css";
-import TicTacToeBoardCell from "../../../components/Boards/TicTacToe/TicTacToeBoardCell";
+import TicTacToeBoardCell from "./TicTacToeBoardCell";
 
 const rows = 3;
 const columns = 3;
