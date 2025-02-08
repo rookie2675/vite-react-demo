@@ -1,16 +1,20 @@
 import styles from "./ConnectFourBoard.module.css";
+import ConnectFourBoardCell from "./ConnectFourBoardCell";
+
+export type Token = "red" | "yellow" | null;
 
 const rows = 6;
 const columns = 7;
 
-function createGrid(): React.JSX.Element[][] {
+function createGrid(currentToken: Token): React.JSX.Element[][] {
     const array: React.JSX.Element[][] = [];
 
     for (let rowIndex = 0; rowIndex < rows; rowIndex++) {
         const row: React.JSX.Element[] = [];
 
         for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
-            row.push(<td className={styles.square} key={`${rowIndex.toString()}${columnIndex.toString()}`}></td>);
+            const key = `${rowIndex.toString()}${columnIndex.toString()}`;
+            row.push(<ConnectFourBoardCell key={key} token={currentToken} />);
         }
 
         array.push(row);
@@ -20,7 +24,7 @@ function createGrid(): React.JSX.Element[][] {
 }
 
 export default function ConnectFourBoard(): React.JSX.Element {
-    const grid = createGrid();
+    const grid = createGrid("yellow");
 
     return (
         <table className={styles.table}>

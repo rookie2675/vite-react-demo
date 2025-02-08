@@ -1,0 +1,23 @@
+.baseCell {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 4px;
+    border: 4px solid var(--darker-blue);
+}
+
+.redCell {
+    composes: baseCell;
+    background-color: rgb(238, 76, 76);
+}
+
+.yellowCell {
+    composes: baseCell;
+    background-color: yellow;
+}
+
+.whiteCell {
+    composes: baseCell;
+    background-color: white;
+}
