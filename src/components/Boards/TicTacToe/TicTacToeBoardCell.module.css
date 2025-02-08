@@ -1,11 +1,9 @@
 .cell {
     text-align: center;
     color: white;
-    padding: 0.5em;
-    font-size: 80px;
     font-weight: bold;
     height: 100px;
     width: 100px;
     background-color: var(--darker-blue);
-    border: 12px solid var(--blue);
+    border: 6px solid var(--blue);
 }

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import styles from "./TicTacToeBoardCell.module.css";
+import TicTacToeCrossToken from "./TicTacToeCrossToken";
+import TicTacToeCircleToken from "./TicTacToeCircleToken";
 
 export default function TicTacToeBoardSquare(): React.JSX.Element {
-    const [token, setToken] = useState("");
+    type Token = "X" | "O" | null;
+    const [token, setToken] = useState<Token>(null);
 
     function handleClick(): void {
         setToken(token === "X" ? "O" : "X");
@@ -10,7 +13,7 @@ export default function TicTacToeBoardSquare(): React.JSX.Element {
 
     return (
         <td className={styles.cell} onClick={handleClick}>
-            {token}
+            {token === "X" ? <TicTacToeCrossToken /> : <TicTacToeCircleToken />}
         </td>
     );
 }
