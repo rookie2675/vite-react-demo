@@ -1,6 +1,6 @@
 import cross from "@/assets/cross.svg";
-import styles from "./TicTacToeCrossToken.module.css";
+import TicTacToeToken from "./TicTacToeToken";
 
 export default function TicTacToeCrossToken(): React.JSX.Element {
-    return <img src={cross} alt="cross" className={styles.token} />;
+    return <TicTacToeToken image={cross} alt="cross" />;
 }
