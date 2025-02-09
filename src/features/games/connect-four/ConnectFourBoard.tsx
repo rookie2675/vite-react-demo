@@ -24,7 +24,7 @@ function createGrid(currentToken: Token): React.JSX.Element[][] {
 }
 
 export default function ConnectFourBoard(): React.JSX.Element {
-    const grid = createGrid("yellow");
+    const grid = createGrid(null);
 
     return (
         <table className={styles.table}>

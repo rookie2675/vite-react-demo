@@ -3,14 +3,41 @@
     --yellow: #fffd94;
     --blue: #1f8fff;
     --darker-blue: #1f79ff;
+    --grey: #303030;
 }
 
 body {
     margin: 0;
+    padding: 1em;
+    color: white;
+    background-color: black;
 }
 
 button {
-    padding: 0.5em;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: var(--grey);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+input {
+    border: 1px solid transparent;
+    color: white;
+    background-color: var(--grey);
+}
+
+input:focus {
+    outline: none;
 }
 
 main {
