@@ -10,8 +10,8 @@ export default function Header(props: Props): React.JSX.Element {
     return (
         <>
             <header className="header">
-                <ReactLogo width="40em" />
-                <ViteLogo width="40em" />
+                <ViteLogo />
+                <ReactLogo />
                 <h1>React + Vite Playground</h1>
             </header>
             {props.children}

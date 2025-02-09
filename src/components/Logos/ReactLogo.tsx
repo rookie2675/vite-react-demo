@@ -1,9 +1,8 @@
 import logo from "@/assets/react.svg";
+import NavigationLogo from "./NavigationLogo";
 
-interface Props {
-    readonly width: string;
-}
+const url = "https://react.dev/";
 
-export default function ReactLogo(props: Props): React.JSX.Element {
-    return <img src={logo} alt="react-logo" width={props.width} />;
+export default function ReactLogo(): React.JSX.Element {
+    return <NavigationLogo url={url} alt="react" logo={logo} />;
 }
