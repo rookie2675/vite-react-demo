@@ -3,6 +3,7 @@ import { Token } from "./ConnectFourBoard";
 
 interface Props {
     readonly token: Token;
+    readonly changeTurn: () => void;
 }
 
 export default function ConnectFourBoardCell(props: Props): React.JSX.Element {
@@ -16,5 +17,5 @@ export default function ConnectFourBoardCell(props: Props): React.JSX.Element {
         style = styles.whiteCell;
     }
 
-    return <td className={style}></td>;
+    return <td className={style} onClick={props.changeTurn}></td>;
 }

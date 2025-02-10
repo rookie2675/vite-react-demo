@@ -1,12 +1,14 @@
+import { useEffect, useState } from "react";
 import styles from "./ConnectFourBoard.module.css";
 import ConnectFourBoardCell from "./ConnectFourBoardCell";
+import chip from "@/assets/chip.svg";
 
 export type Token = "red" | "yellow" | null;
 
 const rows = 6;
 const columns = 7;
 
-function createGrid(currentToken: Token): React.JSX.Element[][] {
+function createGrid(currentToken: Token, changeTurn: () => void): React.JSX.Element[][] {
     const array: React.JSX.Element[][] = [];
 
     for (let rowIndex = 0; rowIndex < rows; rowIndex++) {
@@ -14,7 +16,7 @@ function createGrid(currentToken: Token): React.JSX.Element[][] {
 
         for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
             const key = `${rowIndex.toString()}${columnIndex.toString()}`;
-            row.push(<ConnectFourBoardCell key={key} token={currentToken} />);
+            row.push(<ConnectFourBoardCell key={key} token={currentToken} changeTurn={changeTurn} />);
         }
 
         array.push(row);
@@ -24,15 +26,29 @@ function createGrid(currentToken: Token): React.JSX.Element[][] {
 }
 
 export default function ConnectFourBoard(): React.JSX.Element {
-    const grid = createGrid(null);
+    const [turn, setTurn] = useState<Token>(null);
+
+    function changeTurn(): void {
+        setTurn(turn === "red" ? "yellow" : "red");
+    }
+
+    const grid = createGrid(null, changeTurn);
+
+    useEffect(() => {
+        setTurn("red");
+    }, []);
 
     return (
-        <table className={styles.table}>
-            <tbody className={styles.tbody}>
-                {grid.map((row, rowIndex) => (
-                    <tr key={rowIndex}>{row}</tr>
-                ))}
-            </tbody>
-        </table>
+        <>
+            <div>Turn: {turn}</div>
+
+            <table className={styles.table}>
+                <tbody className={styles.tbody}>
+                    {grid.map((row, rowIndex) => (
+                        <tr key={rowIndex}>{row}</tr>
+                    ))}
+                </tbody>
+            </table>
+        </>
     );
 }
