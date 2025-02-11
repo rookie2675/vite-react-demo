@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./ConnectFourBoard.module.css";
 import ConnectFourBoardCell from "./ConnectFourBoardCell";
-import chip from "@/assets/chip.svg";
 
 export type Token = "red" | "yellow" | null;
 
