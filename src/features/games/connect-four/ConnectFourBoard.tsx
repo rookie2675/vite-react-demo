@@ -1,53 +1,45 @@
-import { useEffect, useState } from "react";
-import styles from "./ConnectFourBoard.module.css";
-import ConnectFourBoardCell from "./ConnectFourBoardCell";
+import React from 'react';
+import styles from './ConnectFourBoard.module.css';
+import ConnectFourBoardColumnComponent, { ConnectFourBoardColumnComponentProps } from './ConnectFourBoardColumnComponent';
 
-export type Token = "red" | "yellow" | null;
-
-const rows = 6;
-const columns = 7;
-
-function createGrid(currentToken: Token, changeTurn: () => void): React.JSX.Element[][] {
-    const array: React.JSX.Element[][] = [];
-
-    for (let rowIndex = 0; rowIndex < rows; rowIndex++) {
-        const row: React.JSX.Element[] = [];
-
-        for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
-            const key = `${rowIndex.toString()}${columnIndex.toString()}`;
-            row.push(<ConnectFourBoardCell key={key} token={currentToken} changeTurn={changeTurn} />);
-        }
-
-        array.push(row);
-    }
-
-    return array;
+interface ConnectFourBoardConfiguration {
+    rows: number;
+    columns: number;
 }
 
-export default function ConnectFourBoard(): React.JSX.Element {
-    const [turn, setTurn] = useState<Token>(null);
+const configuration: ConnectFourBoardConfiguration = {
+    rows: 6,
+    columns: 7,
+};
 
-    function changeTurn(): void {
-        setTurn(turn === "red" ? "yellow" : "red");
+function createBoard(configuration: ConnectFourBoardConfiguration, changeTurn: () => void): React.JSX.Element[] {
+    const board: React.JSX.Element[] = [];
+
+    for (let index = 0; index < configuration.columns; index++) {
+        const columnProps: ConnectFourBoardColumnComponentProps = {
+            index,
+            changeTurn,
+            rows: configuration.rows,
+        };
+
+        board.push(<ConnectFourBoardColumnComponent key={index} {...columnProps} />);
     }
 
-    const grid = createGrid(null, changeTurn);
+    return board;
+}
 
-    useEffect(() => {
-        setTurn("red");
-    }, []);
+interface ConnectFourBoardProps {
+    changeTurn: () => void;
+}
+
+export const ConnectFourBoard = React.memo(function ConnectFourBoard(props: ConnectFourBoardProps) {
+    console.log('Board is rendering...');
+
+    const board: React.JSX.Element[] = createBoard(configuration, props.changeTurn);
 
     return (
-        <>
-            <div>Turn: {turn}</div>
-
-            <table className={styles.table}>
-                <tbody className={styles.tbody}>
-                    {grid.map((row, rowIndex) => (
-                        <tr key={rowIndex}>{row}</tr>
-                    ))}
-                </tbody>
-            </table>
-        </>
+        <div id='board' className={styles.board}>
+            {board}
+        </div>
     );
-}
+});

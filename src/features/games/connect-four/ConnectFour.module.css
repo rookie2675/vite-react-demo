@@ -1,0 +1,25 @@
+.boardContainer {
+    width: 600px;
+}
+
+.turnContainer {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5em;
+}
+
+.baseTurnIndicator {
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+}
+
+.redTurnIndicator {
+    composes: baseTurnIndicator;
+    background-color: var(--red);
+}
+
+.yellowTurnIndicator {
+    composes: baseTurnIndicator;
+    background-color: var(--yellow);
+}

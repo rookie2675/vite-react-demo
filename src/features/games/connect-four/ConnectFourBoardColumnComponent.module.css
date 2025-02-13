@@ -1,0 +1,9 @@
+.column {
+    flex: 1;
+    border-radius: 0;
+    background-color: var(--blue);
+}
+
+.column:hover {
+    opacity: 0.95;
+}
