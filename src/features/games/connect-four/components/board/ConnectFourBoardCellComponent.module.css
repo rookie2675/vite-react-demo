@@ -1,18 +1,17 @@
 .baseCell {
     aspect-ratio: 1;
     border-radius: 50%;
-    margin: 4px;
     border: 8px solid var(--darker-blue);
 }
 
 .redCell {
     composes: baseCell;
-    background-color: rgb(238, 76, 76);
+    background-color: var(--red);
 }
 
 .yellowCell {
     composes: baseCell;
-    background-color: yellow;
+    background-color: var(--yellow);
 }
 
 .whiteCell {

@@ -1,9 +1,6 @@
-.boardContainer {
-    width: 600px;
-}
-
-.turnContainer {
+.turnIndicatorContainer {
     display: flex;
+    flex-direction: row;
     gap: 10px;
     font-size: 1.5em;
 }
