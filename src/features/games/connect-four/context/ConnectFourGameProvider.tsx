@@ -1,13 +1,7 @@
-import React, { createContext, useState, useCallback, useContext, useMemo } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
+import { ConnectFourGameContext } from './ConnectFourGameContext';
 
 export type Token = 'red' | 'yellow' | null;
-
-interface ConnectFourGameState {
-    isGameOver: boolean;
-    winner: Token | null;
-    currentPlayer: Token;
-    boardState: Token[][];
-}
 
 // ===================== Board Configuration =====================
 
@@ -66,13 +60,6 @@ function checkWinCondition(board: Token[][], column: number, row: number, player
 }
 
 // ===================== Context =====================
-
-interface ConnectFourGameContextType extends ConnectFourGameState {
-    makeMove: (column: number) => boolean;
-    resetGame: () => void;
-}
-
-const ConnectFourGameContext = createContext<ConnectFourGameContextType | undefined>(undefined);
 
 interface ConnectFourGameProviderProps {
     children: React.ReactNode;
@@ -139,15 +126,4 @@ export function ConnectFourGameProvider(props: ConnectFourGameProviderProps) {
     );
 
     return <ConnectFourGameContext.Provider value={contextValue}>{props.children}</ConnectFourGameContext.Provider>;
-}
-
-// Custom hook for consuming the game context
-export function useConnectFourGame() {
-    const context = useContext(ConnectFourGameContext);
-
-    if (context === undefined) {
-        throw new Error('useConnectFourGame must be used within a ConnectFourGameProvider');
-    }
-
-    return context;
 }
