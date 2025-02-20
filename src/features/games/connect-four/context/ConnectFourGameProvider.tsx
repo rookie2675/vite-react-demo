@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { ConnectFourGameContext } from './ConnectFourGameContext';
-
-export type Token = 'red' | 'yellow' | null;
+import { Token } from '@/features/games/connect-four/types/ConnectFourTokenType';
 
 // ===================== Board Configuration =====================
 
