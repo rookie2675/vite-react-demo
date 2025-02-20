@@ -1,5 +1,5 @@
 import React from 'react';
-import { useConnectFourGame } from '@/features/games/connect-four/context/ConnectFourGameProvider';
+import { useConnectFourGame } from '@/features/games/connect-four/hooks/useConnectFourGame';
 import ConnectFourBoardColumnComponent from '@/features/games/connect-four/components/board/ConnectFourBoardColumnComponent';
 
 import styles from './ConnectFourBoardComponent.module.css';

@@ -1,4 +1,4 @@
-import { useConnectFourGame } from '../../context/ConnectFourGameProvider';
+import { useConnectFourGame } from '../../hooks/useConnectFourGame';
 
 import styles from '../ui/ConnectFourTurnIndicator.module.css';
 

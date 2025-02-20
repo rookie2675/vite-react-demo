@@ -1,4 +1,4 @@
-import { useConnectFourGame } from '@/features/games/connect-four/context/ConnectFourGameProvider';
+import { useConnectFourGame } from '@/features/games/connect-four/hooks/useConnectFourGame';
 
 export default function ConnectFourResetGameButton(): React.JSX.Element {
     const { resetGame } = useConnectFourGame();

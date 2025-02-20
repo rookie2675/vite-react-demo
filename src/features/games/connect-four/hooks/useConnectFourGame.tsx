@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ConnectFourGameContext } from '../context/ConnectFourGameProvider';
+import { ConnectFourGameContext } from '@/features/games/connect-four/context/ConnectFourGameContext';
 
 export function useConnectFourGame() {
     const context = useContext(ConnectFourGameContext);
