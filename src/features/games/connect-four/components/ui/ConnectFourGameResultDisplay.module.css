@@ -1,0 +1,14 @@
+.text {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.redText {
+    composes: text;
+    color: var(--red);
+}
+
+.yellowText {
+    composes: text;
+    color: var(--yellow);
+}

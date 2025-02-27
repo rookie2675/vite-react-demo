@@ -1,11 +1,20 @@
 import { useConnectFourGame } from '@/features/games/connect-four/hooks/useConnectFourGame';
 
-export default function ConnectFourGameResultDisplay(): React.JSX.Element {
+import styles from './ConnectFourGameResultDisplay.module.css';
+import capitalize from '@/utilities/capitalize';
+
+export default function ConnectFourGameResultDisplay(): React.JSX.Element | null {
     const { winner } = useConnectFourGame();
 
     if (winner) {
-        return <div>Winner: {winner}</div>;
+        const className = winner === 'red' ? styles.redText : styles.yellowText;
+        return (
+            <div className={styles.text}>
+                <span className={className}>{capitalize(winner)} </span>
+                <span>player won!</span>
+            </div>
+        );
     }
 
-    return <div>Game over</div>;
+    return null;
 }

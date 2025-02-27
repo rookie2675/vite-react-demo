@@ -50,3 +50,11 @@ main {
     align-items: center;
     gap: 2em;
 }
+
+.redText {
+    color: var(--red);
+}
+
+.yellowText {
+    color: var(--yellow);
+}

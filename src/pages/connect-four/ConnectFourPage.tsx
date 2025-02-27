@@ -9,12 +9,12 @@ import styles from './ConnectFourPage.module.css';
 export default function ConnectFourPage(): React.JSX.Element {
     return (
         <ConnectFourGameProvider>
-            <ConnectFourGameResultDisplay />
             <ConnectFourTurnIndicator />
             <div className={styles.boardContainer}>
                 <ConnectFourBoardComponent />
             </div>
             <ConnectFourResetGameButton />
+            <ConnectFourGameResultDisplay />
         </ConnectFourGameProvider>
     );
 }
