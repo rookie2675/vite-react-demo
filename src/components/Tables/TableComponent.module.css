@@ -1,21 +1,3 @@
-.options {
-    gap: 2em;
-    display: flex;
-    flex-direction: row;
-}
-
-.dimensionControl {
-    gap: 1em;
-    display: flex;
-    flex-direction: column;
-}
-
-.label {
-    gap: 0.5em;
-    display: flex;
-    flex-direction: row;
-}
-
 .cell {
     width: 10em;
     height: 10em;

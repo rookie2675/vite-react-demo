@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import Home from '@/pages/HomePage';
 import TicTacToe from '@/pages/TicTacToePage';
-import TablePage from '@/pages/TablePage';
+import TablePage from '@/pages/table/TablePage';
 import ConnectFour from '@/pages/connect-four/ConnectFourPage';
 
 export default function RoutesConfiguration(): React.JSX.Element {
