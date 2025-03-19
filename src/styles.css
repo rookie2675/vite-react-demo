@@ -6,11 +6,27 @@
     --grey: #303030;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     margin: 0;
-    padding: 1em;
+    height: 100%;
+    display: flex;
     color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    flex-direction: column;
     background-color: black;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
 }
 
 h2 {
