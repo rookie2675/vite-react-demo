@@ -7,18 +7,12 @@
 }
 
 html {
-    height: 100vh;
+    color: white;
+    background-color: black;
 }
 
-body {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    color: white;
-    padding-left: 1em;
-    padding-right: 1em;
-    flex-direction: column;
-    background-color: black;
+.app {
+    height: 100vh;
 }
 
 footer {
