@@ -1,0 +1,8 @@
+.navigationbar {
+    flex: 2;
+    gap: 1em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey);
+}
