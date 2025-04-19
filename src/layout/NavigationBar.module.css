@@ -1,8 +1,12 @@
 .navigationbar {
-    flex: 2;
     gap: 1em;
-    height: 100vh;
+    flex: 2;
+    margin: 1em;
+    padding: 1em;
     display: flex;
+    font-size: smaller;
+    border-radius: 0.5em;
     flex-direction: column;
-    background-color: var(--grey);
+    text-align: center;
+    background-color: var(--darker-blue);
 }

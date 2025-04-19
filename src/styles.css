@@ -8,7 +8,7 @@
 
 html {
     color: white;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
 }
 
 body {
@@ -16,8 +16,11 @@ body {
     padding: 0;
 }
 
-.app {
-    height: 100vh;
+main {
+    flex: 10;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
@@ -66,7 +69,16 @@ main {
     gap: 2em;
 }
 
+a {
+    font-weight: 600;
+}
+
 a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
     color: white;
     text-decoration: none;
 }

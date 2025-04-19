@@ -1,4 +1,4 @@
-import styles from "./NavigationLogo.module.css";
+import styles from './NavigationLogo.module.css';
 
 interface Props {
     readonly url: string;
@@ -8,8 +8,8 @@ interface Props {
 
 export default function NavigationLogo(props: Props): React.JSX.Element {
     return (
-        <a href={props.url} target="_blank" rel="noreferrer" className={styles.container}>
-            <img src={props.logo} alt={props.alt} width={40} />
+        <a href={props.url} target='_blank' rel='noreferrer' className={styles.container}>
+            <img src={props.logo} alt={props.alt} width={30} />
         </a>
     );
 }

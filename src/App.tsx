@@ -1,17 +1,14 @@
 import RoutesConfiguration from './configurations/RoutesConfiguration';
-import Header from './layout/Header';
 import NavigationBar from './layout/NavigationBar';
+import styles from './App.module.css';
 
 export default function App(): React.JSX.Element {
     return (
-        <div className='app'>
-            <Header />
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <NavigationBar />
-                <main style={{ flex: 14 }}>
-                    <RoutesConfiguration />
-                </main>
-            </div>
+        <div className={styles.app}>
+            <NavigationBar />
+            <main>
+                <RoutesConfiguration />
+            </main>
         </div>
     );
 }

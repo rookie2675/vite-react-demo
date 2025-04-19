@@ -1,0 +1,10 @@
+.title {
+    font-size: x-small;
+}
+
+.logos {
+    gap: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
