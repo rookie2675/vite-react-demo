@@ -4,9 +4,14 @@
     margin: 1em;
     padding: 1em;
     display: flex;
-    font-size: smaller;
+    text-align: center;
+    font-size: x-small;
     border-radius: 0.5em;
     flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
     background-color: var(--darker-blue);
+}
+
+.copyright {
+    margin-top: auto;
 }
