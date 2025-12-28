@@ -1,0 +1,9 @@
+.console {
+    width: 100%;
+    min-height: 55vh;
+    max-height: 55vh;
+    overflow: auto;
+    padding: 1em;
+    border-radius: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.35);
+}
