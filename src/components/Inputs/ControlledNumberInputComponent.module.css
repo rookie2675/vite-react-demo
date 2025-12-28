@@ -1,0 +1,8 @@
+.input {
+    padding: 0.4em 0.6em;
+    border-radius: 0.5rem;
+}
+
+.disabled {
+    opacity: 0.5;
+}
