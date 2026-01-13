@@ -20,6 +20,9 @@ export default function NavigationBar(): React.JSX.Element {
             <button>
                 <a href='/suspense-demonstration'>Suspense Demonstration</a>{' '}
             </button>
+            <button>
+                <a href='/web-streams'>Web Streams</a>{' '}
+            </button>
             <div className={styles.copyright}>Copyright © 2025 Ricardo Almeida</div>
         </nav>
     );

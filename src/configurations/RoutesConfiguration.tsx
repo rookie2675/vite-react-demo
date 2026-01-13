@@ -4,6 +4,7 @@ import TicTacToe from '@/pages/TicTacToePage';
 import TablePage from '@/pages/table/TablePage';
 import ConnectFour from '@/pages/connect-four/ConnectFourPage';
 import SuspenseDemonstration from '@/pages/suspense-demonstration/SuspenseDemonstration';
+import WebStreamsPage from '@/pages/webstream/WebStreamsPage';
 
 export default function RoutesConfiguration(): React.JSX.Element {
     return (
@@ -13,6 +14,7 @@ export default function RoutesConfiguration(): React.JSX.Element {
             <Route path='/tic-tac-toe' element={<TicTacToe />} />
             <Route path='/connect-four' element={<ConnectFour />} />
             <Route path='/suspense-demonstration' element={<SuspenseDemonstration />} />
+            <Route path='/web-streams' element={<WebStreamsPage />} />
         </Routes>
     );
 }
